@@ -136,6 +136,55 @@
     .form-field-animate:nth-child(4) { animation-delay: 0.4s; }
     .form-field-animate:nth-child(5) { animation-delay: 0.5s; }
     .form-field-animate:nth-child(6) { animation-delay: 0.6s; }
+    
+    /* Stat badge animations */
+    @keyframes badgeFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes iconRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes numberCount {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .badge-float {
+      animation: badgeFloat 3s ease-in-out infinite;
+    }
+    
+    .badge-pulse {
+      animation: badgePulse 2s ease-in-out infinite;
+    }
+    
+    .icon-rotate {
+      animation: iconRotate 8s linear infinite;
+    }
+    
+    .number-count {
+      animation: numberCount 1s ease-out forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+    }
+    
+    /* Service icon hover animations */
+    .service-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .service-icon:hover {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 4px 8px rgba(255, 119, 119, 0.3));
+    }
   </style>
 
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
@@ -259,17 +308,17 @@
           </div>
 
           <!-- Stat badge (bottom-right) -->
-          <div class="card absolute right-2 bottom-20 sm:bottom-24 px-5 py-4">
+          <div class="card absolute right-2 bottom-20 sm:bottom-24 px-5 py-4 badge-float">
             <div class="flex items-center gap-3">
-              <div class="h-9 w-9 rounded-full bg-[var(--pink)]/10 flex items-center justify-center text-[var(--pink)]">
+              <div class="h-9 w-9 rounded-full bg-[var(--pink)]/10 flex items-center justify-center text-[var(--pink)] badge-pulse">
                 <!-- Location pin SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 icon-rotate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" />
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7.333 8-13a8 8 0 10-16 0c0 5.667 8 13 8 13z" />
                 </svg>
               </div>
               <div>
-                <div class="text-xl font-extrabold text-slate-900 leading-tight">25+</div>
+                <div class="text-xl font-extrabold text-slate-900 leading-tight number-count">25+</div>
                 <div class="text-slate-500 text-sm">Cities Covered in Abu Dhabi</div>
               </div>
             </div>
@@ -277,7 +326,7 @@
           
 
           <!-- Small badge under the card (like the “Made in Framer” chip) -->
-          <div class="card absolute right-2 bottom-4 px-4 py-2 flex items-center gap-2">
+          <div class="card absolute right-2 bottom-4 px-4 py-2 flex items-center gap-2 badge-pulse">
             <span class="text-sm font-semibold">Amana </span>
             <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-[var(--pink)] text-white text-xs font-bold">E</span>
             <span class="text-sm">Trade</span>
@@ -307,7 +356,7 @@
           <div class="p-8 md:p-10 md:border-r md:border-slate-200">
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
               <!-- icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-icon">
                 <path d="M3 7h18M6 3v4m12-4v4M6 21v-7a2 2 0 0 1 2-2h4" />
                 <path d="M14 21v-5a2 2 0 0 1 2-2h3" />
               </svg>
@@ -326,7 +375,7 @@
           <div class="p-8 md:p-10 md:border-r md:border-slate-200">
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
               <!-- icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-icon">
                 <path d="M12 14v7M7 11l5 3 5-3M4 7h16M7 7V3m10 4V3" />
               </svg>
             </div>
@@ -344,7 +393,7 @@
           <div class="p-8 md:p-10">
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
               <!-- icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-icon">
                 <path d="M3 12h6l3-9 3 18 3-9h3" />
               </svg>
             </div>

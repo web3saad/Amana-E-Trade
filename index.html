@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amana e-Trade</title>
+  <meta name="description" content="Amana e-Trade — flexible work, training and community for women in trade and entrepreneurship.">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts (feel of the reference). Keep Bespoke Serif for the main heading per your spec -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=General+Sans:wght@400;500;600;700&family=Bespoke+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* blinking caret for the typewriter */
+    @keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide 1.2s ease-out forwards;
+}
+
+
+    :root{
+      --pink:#FF7777;         /* primary */
+      --pink-strong:#e96666;  /* hover */
+      --tagline:#b99954;      /* soft top tagline */
+      --headline:#0f172a;     /* dark heading (backup) */
+      --copy:#475569;         /* body text */
+      --bg1:#FFF2F4;          /* hero gradient */
+      --bg2:#FFFFFF;
+    }
+    html, body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+   
+    .btn{border-radius:9999px;padding:.9rem 1.25rem;font-weight:600}
+    .btn-primary{background:var(--pink);color:#fff}
+    .btn-primary:hover{background:var(--pink-strong)}
+    .btn-outline{border:2px solid var(--pink);color:var(--pink);background:#fff}
+    .btn-outline:hover{background:var(--pink);color:#fff}
+    .hero-bg{
+      background:
+        radial-gradient(1200px 600px at 75% 0%, var(--bg1), rgba(255,255,255,0)),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+    }
+    .card{background:#fff; box-shadow:0 10px 25px rgba(15,23,42,.08); border-radius:1rem}
+  </style>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("J5TQSzy6kgOC9Ro5y"); // your Public Key
+  })();
+</script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between">
+
+
+        <a href="#" class="flex items-center">
+            <img src="amana-logo.png" 
+                 alt="Amana e-Trade Logo" 
+                 class="h-28 w-auto object-contain block" />
+          </a>
+          
+          
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-[var(--pink)]" href="#home">Home</a>
+        <a class="hover:text-[var(--pink)]" href="#services">Services</a>
+        <a class="hover:text-[var(--pink)]" href="#about">About</a>
+        <a class="hover:text-[var(--pink)]" href="#contact">Contact</a>
+      </nav>
+
+      <!-- <a href="#contact" class="hidden md:inline-block btn btn-primary shadow">Free Consultation</a> -->
+      <button class="md:hidden text-3xl leading-none text-slate-800" aria-label="Open menu">☰</button>
+      <!-- Mobile Menu (hidden by default) -->
+<div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-200 shadow-lg">
+    <nav class="flex flex-col p-4 space-y-3 text-slate-800 font-medium">
+      <a href="#home" class="hover:text-[var(--pink)]">Home</a>
+      <a href="#services" class="hover:text-[var(--pink)]">Services</a>
+      <a href="#about" class="hover:text-[var(--pink)]">About</a>
+      <a href="#contact" class="hover:text-[var(--pink)]">Contact</a>
+    </nav>
+  </div>
+  
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 md:py-18">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Left copy -->
+        <div>
+          <p class="text-[var(--tagline)] font-semibold uppercase tracking-wide mb-3 text-center md:text-left">
+            Empowering Women, Empowering Trade
+          </p>
+
+          <h1 class="h1 text-3xl sm:text-4xl md:text-[44px] leading-tight md:leading-[1.15] tracking-tight font-bold text-center md:text-left animate-fadeSlide">
+            Start Your Journey with<br class="hidden sm:block"/> Amana e-Trade
+          </h1>
+          
+          
+
+          <p class="text-[var(--copy)] text-base sm:text-lg leading-relaxed mt-4 max-w-prose mx-auto md:mx-0 text-center md:text-left">
+            It’s more than work — it’s growth. Join a supportive network, get training,
+            and access flexible earning opportunities designed to help you thrive.
+          </p>
+
+          <div class="mt-7 flex flex-col xs:flex-row gap-3 items-center md:items-start">
+            <a href="javascript:void(0);" 
+            id="openStartProject" 
+            class="btn btn-primary w-full xs:w-auto text-center">
+            Apply For Work
+         </a>
+         
+            <a href="https://wa.me/971559752746?text=Hi%20Im%20Looking%20for%20Work%20in%20Amana%20E%20Trade" target="_blank" class="btn btn-outline w-full xs:w-auto text-center inline-flex items-center justify-center gap-2 hover:bg-[#FF7777] hover:text-white transition-colors">
+              <span>📞</span> Contact  Us Now
+            </a>
+          </div>
+
+          <!-- Partners row -->
+          <div class="mt-10">
+            <p class="text-slate-500 text-sm uppercase tracking-wide mb-4 text-center md:text-left">
+              Our Partners are Worldwide
+            </p>
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-8">
+              <div class="text-center">
+                <svg width="40" height="40" viewBox="0 0 24 24" class="mx-auto" fill="none" stroke="#FF7777" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/><rect x="4" y="4" width="6" height="16" rx="1" stroke="#FF7777" fill="none"/></svg>
+                <p class="text-[var(--pink)] text-xs font-semibold mt-2 tracking-wide">EARN COMMISSION</p>
+              </div>
+              <div class="text-center">
+                <svg width="40" height="40" viewBox="0 0 24 24" class="mx-auto" fill="none" stroke="#FF7777" stroke-width="1.6"><path d="M4 7h16v10H4z"/><path d="M4 10h16"/></svg>
+                <p class="text-[var(--pink)] text-xs font-semibold mt-2 tracking-wide">WORK FROM HOME </p>
+              </div>
+              <!-- <div class="text-center">
+                <svg width="40" height="40" viewBox="0 0 24 24" class="mx-auto" fill="none" stroke="#FF7777" stroke-width="1.6"><path d="M6 18h12M6 6h12v12H6z"/></svg>
+                <p class="text-[var(--pink)] text-xs font-semibold mt-2 tracking-wide">FULLY TRUSTED</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual (use your transparent PNG: girl.png) -->
+        <div class="relative">
+          <!-- concentric rings backdrop -->
+          <div class="absolute -z-10 inset-0 flex items-center justify-center">
+            <svg width="100%" height="100%" viewBox="0 0 600 600" class="max-w-md opacity-40">
+              <defs><radialGradient id="g" cx="50%" cy="50%"><stop offset="0%" stop-color="#FFD8DE"/><stop offset="100%" stop-color="#FFFFFF"/></radialGradient></defs>
+              <circle cx="300" cy="300" r="260" fill="url(#g)"/>
+              <circle cx="300" cy="300" r="220" fill="none" stroke="#FFD6DC" stroke-width="4"/>
+              <circle cx="300" cy="300" r="180" fill="none" stroke="#FFE3E8" stroke-width="4"/>
+              <circle cx="300" cy="300" r="140" fill="none" stroke="#FFF0F2" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <div class="flex justify-center md:justify-end">
+            <!-- Put girl.png in the same folder as this HTML -->
+            <img src="girl.png" alt="Amana partner"
+                 class="w-full max-w-[420px] object-contain drop-shadow-xl"
+                 style="aspect-ratio: 4 / 5;" />
+          </div>
+
+          <!-- Stat badge (bottom-right) -->
+          <div class="card absolute right-2 bottom-20 sm:bottom-24 px-5 py-4">
+            <div class="flex items-center gap-3">
+              <div class="h-9 w-9 rounded-full bg-[var(--pink)]/10 flex items-center justify-center text-[var(--pink)]">
+                <!-- Location pin SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7.333 8-13a8 8 0 10-16 0c0 5.667 8 13 8 13z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xl font-extrabold text-slate-900 leading-tight">25+</div>
+                <div class="text-slate-500 text-sm">Cities Covered in Abu Dhabi</div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- Small badge under the card (like the “Made in Framer” chip) -->
+          <div class="card absolute right-2 bottom-4 px-4 py-2 flex items-center gap-2">
+            <span class="text-sm font-semibold">Amana </span>
+            <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-[var(--pink)] text-white text-xs font-bold">E</span>
+            <span class="text-sm">Trade</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section id="services" class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-18 md:py-22">
+      <!-- Section label -->
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <span class="inline-block h-5 w-[3px] bg-[#FF7777] rounded"></span>
+        <span class="uppercase tracking-wide text-sm font-semibold text-slate-500">Our Services</span>
+      </div>
+  
+      <!-- Title -->
+      <h2 class="text-slate-900 text-3xl sm:text-4xl font-extrabold leading-tight text-center">
+        Explore Services
+      </h2>
+  
+      <!-- Big light panel with three items -->
+      <div class="mt-10 rounded-lg border border-slate-100 bg-slate-50">
+        <div class="grid md:grid-cols-3">
+          <!-- Item 1 -->
+          <div class="p-8 md:p-10 md:border-r md:border-slate-200">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
+              <!-- icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7h18M6 3v4m12-4v4M6 21v-7a2 2 0 0 1 2-2h4" />
+                <path d="M14 21v-5a2 2 0 0 1 2-2h3" />
+              </svg>
+            </div>
+            <h3 class="text-slate-900 font-semibold text-xl">Job Opportunities for Women</h3>
+            <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+              We give women the chance to work, grow skills, and earn with full support.
+            </p>
+            <a href="https://wa.me/971559752746?text=Hi%20Im%20looking%20for%20Job%20in%20Amana%20e%20trade" target="_blank" class="mt-5 inline-flex items-center gap-2 text-slate-800 font-semibold hover:text-[#FF7777] transition-colors">
+              Join Now <span>→</span>
+            </a>
+            </div>
+            
+  
+          <!-- Item 2 -->
+          <div class="p-8 md:p-10 md:border-r md:border-slate-200">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
+              <!-- icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 14v7M7 11l5 3 5-3M4 7h16M7 7V3m10 4V3" />
+              </svg>
+            </div>
+            <h3 class="text-slate-900 font-semibold text-xl">Training for Women</h3>
+            <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+              We help women learn new skills and build confidence for better opportunities.
+            </p>
+            <a href="https://wa.me/971559752746?text=Hi%20Im%20looking%20for%20Job%20in%20Amana%20e%20trade" target="_blank" class="mt-5 inline-flex items-center gap-2 text-slate-800 font-semibold hover:text-[#FF7777] transition-colors">
+              Join Now <span>→</span>
+            </a>
+            </div>
+            
+  
+          <!-- Item 3 -->
+          <div class="p-8 md:p-10">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF2F4] mb-6">
+              <!-- icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12h6l3-9 3 18 3-9h3" />
+              </svg>
+            </div>
+            <h3 class="text-slate-800 font-semibold text-xl">Earning & Partnerships</h3>
+            <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+              We offer fair commissions and partnerships to help women earn steady income.
+            </p>
+            <a href="https://wa.me/971559752746?text=Hi%20Im%20looking%20for%20Job%20in%20Amana%20e%20trade" target="_blank" class="mt-5 inline-flex items-center gap-2 text-slate-800 font-semibold hover:text-[#FF7777] transition-colors">
+              Join  Now <span>→</span>
+            </a>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+     ABOUT US
+========================= -->
+<section id="about" class="bg-[#FAFAFB]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-18 md:py-22">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+  
+        <!-- Left: Image with accent frame + badge -->
+        <div class="relative">
+          <!-- accent frame (outer stroke) -->
+          <div class="absolute -top-4 -left-4 h-[88%] w-[92%] border-2 border-[#FF7777] rounded-md hidden sm:block"></div>
+  
+          <!-- main image container -->
+          <div class="card overflow-hidden">
+            <!-- Replace src with your image.
+                 If you don’t have a wide photo yet, you can temporarily use girl.png. -->
+            <img src="about.jpg"
+                 onerror="this.src='girl.jpeg'"
+                 alt="Women at Amana e-Trade"
+                 class="w-full h-[320px] sm:h-[380px] md:h-[420px] object-cover" />
+          </div>
+  
+          <!-- corner badge -->
+          <div class="absolute -bottom-6 left-8 bg-[#FF7777] text-white rounded-md px-6 py-4 shadow-lg">
+            <div class="flex items-baseline gap-2">
+              <span class="text-3xl font-extrabold leading-none">25+</span>
+              <span class="text-sm font-semibold uppercase tracking-wide">Cities Covered in Abudhabi </span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right: Copy -->
+        <div>
+          <!-- small label with thin left bar -->
+          <div class="flex items-center gap-2 mb-3">
+            <span class="inline-block h-5 w-[3px] bg-[#FF7777] rounded"></span>
+            <span class="uppercase tracking-wide text-sm font-semibold text-slate-500">About Us</span>
+          </div>
+  
+          <h2 class="text-slate-900 text-3xl sm:text-4xl font-extrabold leading-tight">
+            Amana e-Trade
+          </h2>
+  
+          <p class="text-slate-500 mt-4 text-base sm:text-lg leading-relaxed">
+            Amana e-Trade helps women build better futures by offering flexible work, skill training, and a supportive community. 
+            We know many women want to balance family life with work, so we provide training, guidance, and project-based opportunities to earn. 
+            Our focus is on honesty, respect, and growth—helping women gain confidence, 
+            learn useful skills, and create steady income in a way that suits their life.
+          </p>
+  
+          <!-- Feature 1 -->
+          <div class="mt-8 flex items-start gap-4">
+            <div class="h-12 w-12 rounded-full bg-[#FF7777]/10 flex items-center justify-center text-[#FF7777] text-xl">
+              🧩
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold text-lg">Flexible Work Opportunities</h3>
+              <p class="text-slate-500 text-sm mt-1">
+                From short-term projects to remote engagements, choose work that fits your lifestyle and schedule.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Feature 2 -->
+          <div class="mt-6 flex items-start gap-4">
+            <div class="h-12 w-12 rounded-full bg-[#FF7777]/10 flex items-center justify-center text-[#FF7777] text-xl">
+              📈
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold text-lg">Commission-Based & Partnership Models </h3>
+              <p class="text-slate-500 text-sm mt-1">
+                Earn through structured programs or collaborate with us to deliver services to clients and communities, ensuring fair and timely compensation.
+              </p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- =========================
+     SERVICES
+========================= -->
+
+<!-- =========================
+     CONTACT
+========================= -->
+<section id="contact" class="bg-white">
+    <!-- Title -->
+    <h2 class="relative z-10 text-3xl font-bold text-center py-10 text-[var(--pink)]">
+      Contact Us Now
+    </h2>
+  
+    <!-- subtle pink grid background -->
+    <div class="absolute inset-x-0 top-0 h-[120px] pointer-events-none -z-10"
+         style="background:
+           linear-gradient(180deg,#FFF2F4 0%, #ffffff 100%),
+           repeating-linear-gradient(0deg, rgba(255,119,119,.10) 0 1px, transparent 1px 26px),
+           repeating-linear-gradient(90deg, rgba(255,119,119,.10) 0 1px, transparent 1px 26px);">
+    </div>
+  
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+  
+        <!-- Form card -->
+        <div class="bg-slate-100 rounded-xl p-6 sm:p-8 shadow-sm lg:col-span-2 max-w-3xl mx-auto w-full">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <!-- Name -->
+            <div>
+              <label class="block text-slate-700 text-sm font-semibold mb-2">Your Name</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 opacity-50">👤</span>
+                <input type="text" id="contactName" placeholder="Enter your name"
+                       class="w-full pl-10 pr-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]" required>
+              </div>
+            </div>
+  
+            <!-- Phone -->
+            <div>
+              <label class="block text-slate-700 text-sm font-semibold mb-2">Phone</label>
+              <div class="relative">
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 opacity-50">📞</span>
+                <input type="tel" id="contactPhone" placeholder="Phone Number"
+                       class="w-full pl-10 pr-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+              </div>
+            </div>
+          </div>
+  
+          <!-- Message -->
+          <div class="mt-5">
+            <label class="block text-slate-700 text-sm font-semibold mb-2">Message</label>
+            <textarea id="contactMessage" rows="6" placeholder="Write Your Message Here"
+                      class="w-full p-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]"></textarea>
+          </div>
+  
+          <!-- Submit -->
+          <button type="button" id="sendWhatsAppBtn"
+                  class="mt-6 inline-block bg-[#FF7777] hover:bg-[#e96666] text-white font-semibold px-6 py-3 rounded-full">
+            Send Your Message
+          </button>
+        </div>
+  
+      </div> <!-- /grid -->
+    </div>   <!-- /container -->
+  </section>
+  
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="bg-[#111] text-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid md:grid-cols-3 gap-10">
+  
+      <!-- About / Logo -->
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-4">Amana e-Trade</h3>
+        <p class="text-gray-400 mb-4">
+            Amana e-Trade is dedicated to empowering women by providing flexible economic opportunities, targeted skill development, and a supportive community.
+        </p>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li>✉️ careers@amanaetrade.com</li>
+          <li>📞 +971 55 975 2746</li>
+        </ul>
+      </div>
+  
+      <!-- Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-4">Links</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#home" class="hover:text-[#FF7777] transition-colors">Home</a></li>
+          <li><a href="#services" class="hover:text-[#FF7777] transition-colors">Services</a></li>
+          <li><a href="#about" class="hover:text-[#FF7777] transition-colors">About</a></li>
+          <li><a href="#contact" class="hover:text-[#FF7777] transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-4">Get updates</h4>
+        <p class="text-gray-400 text-sm mb-4">
+          Stay updated with our latest opportunities, events, and services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="email" id="footerEmail" placeholder="Email Address"
+                 class="w-full px-4 py-3 rounded-md bg-[#1a1a1a] text-white border border-gray-700 focus:border-[#FF7777] outline-none">
+          <button type="button" id="subscribeBtn"
+                  class="px-6 py-3 rounded-md bg-[#FF7777] text-white font-semibold hover:bg-[#e96666]">
+            Subscribe
+          </button>
+        </div>
+        <!-- Success message -->
+        <div id="subscribeMessage" class="hidden mt-3 text-sm text-green-400"></div>
+        <!-- Social Links -->
+        <div class="mt-6 flex gap-4">
+          <a href="#" class="text-gray-400 hover:text-[#FF7777]">🌐</a>
+          <a href="#" class="text-gray-400 hover:text-[#FF7777]">📘</a>
+          <a href="#" class="text-gray-400 hover:text-[#FF7777]">📷</a>
+          <a href="#" class="text-gray-400 hover:text-[#FF7777]">💼</a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom bar -->
+    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+      © 2025 Amana e-Trade. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Start Project Modal -->
+<div id="startProjectModal"
+class="fixed inset-0 z-[999] hidden">
+<!-- overlay -->
+<div id="modalOverlay" class="absolute inset-0 bg-black/40"></div>
+
+<!-- dialog -->
+<div class="relative w-full h-full flex items-center justify-center p-4">
+<div role="dialog" aria-modal="true" aria-labelledby="spmTitle"
+    class="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+ <!-- header -->
+ <div class="flex items-start justify-between">
+   <div>
+     <p class="text-sm font-semibold uppercase tracking-wide" style="color:#B8860B;">
+       Application
+     </p>
+     <h3 id="spmTitle" class="text-2xl font-extrabold text-slate-900 mt-1">
+       Join With Us Today
+     </h3>
+     <p class="text-slate-500 text-sm mt-1">
+       Tell us a bit about you. We’ll get back within 24 Hours
+     </p>
+   </div>
+   <button id="closeStartProject"
+           class="ml-4 -mr-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#FFF2F4] text-[#FF7777] hover:bg-[#ffe7ec]"
+           aria-label="Close">
+     ✕
+   </button>
+ </div>
+
+ <!-- form -->
+ <form id="startProjectForm" class="mt-6 space-y-4">
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+        <input type="text" name="name" required placeholder="Your name"
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-2">Qualification</label>
+        <input type="text" name="qualification" required placeholder="Degree, Diploma, etc."
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+      </div>
+    </div>
+   
+      
+      <!-- Phone & Email -->
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
+          <input type="tel" name="phone" placeholder="+971 50 123 4567" required
+                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+          <input type="email" name="email" placeholder="you@example.com" required
+                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+        </div>
+      </div>
+      
+    <div class="grid sm:grid-cols-2 gap-4">
+      <!-- Work Location -->
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-2">Choose Location</label>
+        <select name="location" required
+                class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+          <option value="" disabled selected>Select a location</option>
+          <option>Corniche</option>
+          <option>Hamdan Street</option>
+          <option>Electra Street</option>
+          <option>Airport Road</option>
+          <option>Muroor Road</option>
+          <option>Defence Road</option>
+          <option>Khalidiya</option>
+          <option>Al Markaziyah</option>
+          <option>Madinat Zayed</option>
+          <option>Tourist Club Area</option>
+          <option>Al Nahyan</option>
+          <option>Al Bateen</option>
+          <option>Al Mushrif</option>
+          <option>Al Karamah</option>
+          <option>Khalifa Street</option>
+          <option>Najda Street</option>
+          <option>Reem Island</option>
+          <option>Al Maryah Island</option>
+          <option>Saadiyat Island</option>
+          <option>Al Mina</option>
+          <option>Port Zayed</option>
+          <option>Al Manhal</option>
+          <option>Khalifa Bin Zayed Street</option>
+        </select>
+      </div>
+  
+      <!-- Age -->
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-2">Age</label>
+        <input type="number" name="age" min="16" placeholder="e.g., 26"
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+      </div>
+    </div>
+  
+    <!-- Husband VISA -->
+    <div class="mt-2">
+      <span class="block text-sm font-semibold text-slate-700 mb-2">
+        Are you a house wife ?
+      </span>
+      <div class="flex gap-6">
+        <label class="inline-flex items-center gap-2">
+          <input type="radio" name="husband" value="Yes" class="accent-[#FF7777]" required>
+          <span>Yes</span>
+        </label>
+        <label class="inline-flex items-center gap-2">
+          <input type="radio" name="husband" value="No" class="accent-[#FF7777]">
+          <span>No</span>
+        </label>
+      </div>
+    </div>
+  <!-- Currently Working -->
+<div class="mt-2">
+    <span class="block text-sm font-semibold text-slate-700 mb-2">
+      Are you currently working?
+    </span>
+    <div class="flex gap-6">
+      <label class="inline-flex items-center gap-2">
+        <input type="radio" name="working" value="Yes" class="accent-[#FF7777]" required>
+        <span>Yes</span>
+      </label>
+      <label class="inline-flex items-center gap-2">
+        <input type="radio" name="working" value="No" class="accent-[#FF7777]">
+        <span>No</span>
+      </label>
+    </div>
+  </div>
+  
+    <!-- Extra Details -->
+    <!-- <div>
+      <label class="block text-sm font-semibold text-slate-700 mb-2">Extra Details</label>
+      <textarea name="details" rows="4" placeholder="Anything else we should know?"
+                class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]"></textarea>
+    </div> -->
+    <p id="formMessage" class="hidden text-center text-sm mt-3"></p>
+
+    <!-- Submit -->
+   <!-- Submit -->
+<button type="submit"
+class="btn-pill w-full bg-[#FF7777] text-white font-semibold hover:bg-[#e96666]">
+Send Application
+</button>
+
+<!-- Success/Error message -->
+<div id="formMessage" class="mt-3 text-center text-sm font-semibold"></div>
+
+  </form>
+  
+</div>
+</div>
+</div>
+
+<script>
+    (function(){
+      const el = document.getElementById('animatedTitle');
+      const phrase = 'Amana e-Trade'; // what to type (editable)
+      const typeSpeed = 90;           // ms per character
+      const holdTime  = 1400;         // pause after typing
+      const delSpeed  = 60;           // ms per character when deleting
+      const loop      = true;         // set false to type once
+  
+      let i = 0, typing = true;
+  
+      function tick(){
+        if(typing){
+          el.textContent = phrase.slice(0, i++);
+          if(i <= phrase.length) return setTimeout(tick, typeSpeed);
+          typing = false;
+          return setTimeout(tick, holdTime);
+        }else{
+          el.textContent = phrase.slice(0, --i);
+          if(i > 0) return setTimeout(tick, delSpeed);
+          typing = loop;
+          return loop ? setTimeout(tick, 400) : null;
+        }
+      }
+      tick();
+    })();
+  </script>
+  
+  <script>
+    const menuBtn = document.querySelector("header button[aria-label='Open menu']");
+    const mobileMenu = document.getElementById("mobileMenu");
+  
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Mobile menu navigation with smooth scrolling
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Close mobile menu
+        mobileMenu.classList.add('hidden');
+        
+        // Get the target section
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          // Smooth scroll to the target section
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Desktop navigation smooth scrolling
+    const desktopNavLinks = document.querySelectorAll('nav a[href^="#"]');
+    desktopNavLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Get the target section
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          // Smooth scroll to the target section
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Footer links smooth scrolling
+    const footerLinks = document.querySelectorAll('footer a[href^="#"]');
+    footerLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Get the target section
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          // Smooth scroll to the target section
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    const openBtn  = document.getElementById('openStartProject');
+  const modal    = document.getElementById('startProjectModal');
+  const closeBtn = document.getElementById('closeStartProject');
+  const overlay  = document.getElementById('modalOverlay');
+
+  function openModal(){ modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+  function closeModal(){ modal.classList.add('hidden'); document.body.style.overflow = ''; }
+
+  openBtn?.addEventListener('click', openModal);
+  closeBtn?.addEventListener('click', closeModal);
+  overlay?.addEventListener('click', closeModal);
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("J5TQSzy6kgOC9Ro5y"); // your EmailJS public key
+  })();
+
+  document.getElementById("startProjectForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const messageBox = document.getElementById("formMessage");
+    messageBox.textContent = "Sending... ⏳";
+    messageBox.className = "mt-3 text-center text-sm font-semibold text-blue-500";
+
+    emailjs.sendForm("service_dmd7y9k", "template_eyjo2b9", this)
+      .then(function() {
+        messageBox.textContent = "✅ Application sent successfully!";
+        messageBox.className = "mt-3 text-center text-sm font-semibold text-green-600";
+        document.getElementById("startProjectForm").reset();
+      }, function(error) {
+        console.error("❌ EmailJS Error:", error);
+        messageBox.textContent = "❌ Failed to send. Please try again.";
+        messageBox.className = "mt-3 text-center text-sm font-semibold text-red-600";
+      });
+  });
+
+  // Contact form WhatsApp redirection
+  document.getElementById("sendWhatsAppBtn").addEventListener("click", function() {
+    const name = document.getElementById("contactName").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
+    
+    // Validate required fields
+    if (!name || !phone || !message) {
+      alert("Please fill in all required fields (Name, Phone, and Message)");
+      return;
+    }
+    
+    // Format the message for WhatsApp
+    const whatsappMessage = `*New Contact Form Submission*
+
+*Name:* ${name}
+*Phone:* ${phone}
+*Message:* ${message}
+
+*Sent from Amana e-Trade website*`;
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Redirect to WhatsApp
+    const whatsappUrl = `https://wa.me/971559752746?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  });
+
+  // Footer subscribe button functionality
+  document.getElementById("subscribeBtn").addEventListener("click", function() {
+    const email = document.getElementById("footerEmail").value.trim();
+    const messageDiv = document.getElementById("subscribeMessage");
+    
+    if (!email) {
+      messageDiv.textContent = "Please enter an email address";
+      messageDiv.className = "mt-3 text-sm text-red-400";
+      messageDiv.classList.remove("hidden");
+      return;
+    }
+    
+    if (!isValidEmail(email)) {
+      messageDiv.textContent = "Please enter a valid email address";
+      messageDiv.className = "mt-3 text-sm text-red-400";
+      messageDiv.classList.remove("hidden");
+      return;
+    }
+    
+    // Show success message
+    messageDiv.textContent = "✅ Thank you for subscribing!";
+    messageDiv.className = "mt-3 text-sm text-green-400";
+    messageDiv.classList.remove("hidden");
+    
+    // Clear the email input
+    document.getElementById("footerEmail").value = "";
+    
+    // Hide the message after 5 seconds
+    setTimeout(() => {
+      messageDiv.classList.add("hidden");
+    }, 5000);
+  });
+
+  // Email validation function
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+</script>
+
+
+    
+    
+
+</body>
+</html>

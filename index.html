@@ -48,6 +48,94 @@
         linear-gradient(180deg,var(--bg1),var(--bg2));
     }
     .card{background:#fff; box-shadow:0 10px 25px rgba(15,23,42,.08); border-radius:1rem}
+    
+    /* Modal animations */
+    @keyframes modalFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes modalSlideIn {
+      0% { 
+        opacity: 0; 
+        transform: translateY(-50px) scale(0.9);
+      }
+      100% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    @keyframes modalSlideOut {
+      0% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1);
+      }
+      100% { 
+        opacity: 0; 
+        transform: translateY(-50px) scale(0.9);
+      }
+    }
+    
+    .modal-enter {
+      animation: modalFadeIn 0.3s ease-out;
+    }
+    
+    .modal-dialog-enter {
+      animation: modalSlideIn 0.4s ease-out;
+    }
+    
+    .modal-dialog-exit {
+      animation: modalSlideOut 0.3s ease-in;
+    }
+    
+    .modal-overlay-enter {
+      animation: modalFadeIn 0.3s ease-out;
+    }
+    
+    /* Enhanced button animations */
+    .btn-primary {
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 119, 119, 0.3);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    /* Modal backdrop blur effect */
+    .modal-backdrop {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    
+    /* Form field entrance animations */
+    @keyframes formFieldSlideIn {
+      0% { 
+        opacity: 0; 
+        transform: translateX(-20px);
+      }
+      100% { 
+        opacity: 1; 
+        transform: translateX(0);
+      }
+    }
+    
+    .form-field-animate {
+      animation: formFieldSlideIn 0.5s ease-out forwards;
+    }
+    
+    .form-field-animate:nth-child(1) { animation-delay: 0.1s; }
+    .form-field-animate:nth-child(2) { animation-delay: 0.2s; }
+    .form-field-animate:nth-child(3) { animation-delay: 0.3s; }
+    .form-field-animate:nth-child(4) { animation-delay: 0.4s; }
+    .form-field-animate:nth-child(5) { animation-delay: 0.5s; }
+    .form-field-animate:nth-child(6) { animation-delay: 0.6s; }
   </style>
 
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
@@ -485,12 +573,12 @@
 <div id="startProjectModal"
 class="fixed inset-0 z-[999] hidden">
 <!-- overlay -->
-<div id="modalOverlay" class="absolute inset-0 bg-black/40"></div>
+<div id="modalOverlay" class="absolute inset-0 bg-black/40 transition-opacity duration-300 modal-backdrop"></div>
 
 <!-- dialog -->
 <div class="relative w-full h-full flex items-center justify-center p-4">
 <div role="dialog" aria-modal="true" aria-labelledby="spmTitle"
-    class="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+    class="w-full max-w-xl bg-white rounded-2xl shadow-2xl p-6 sm:p-8 transform transition-all duration-300">
  <!-- header -->
  <div class="flex items-start justify-between">
    <div>
@@ -514,39 +602,39 @@ class="fixed inset-0 z-[999] hidden">
  <!-- form -->
  <form id="startProjectForm" class="mt-6 space-y-4">
     <div class="grid sm:grid-cols-2 gap-4">
-      <div>
+      <div class="form-field-animate">
         <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
         <input type="text" name="name" required placeholder="Your name"
-               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
       </div>
-      <div>
+      <div class="form-field-animate">
         <label class="block text-sm font-semibold text-slate-700 mb-2">Qualification</label>
         <input type="text" name="qualification" required placeholder="Degree, Diploma, etc."
-               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
       </div>
     </div>
    
       
       <!-- Phone & Email -->
       <div class="grid sm:grid-cols-2 gap-4">
-        <div>
+        <div class="form-field-animate">
           <label class="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
           <input type="tel" name="phone" placeholder="+971 50 123 4567" required
-                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
         </div>
-        <div>
+        <div class="form-field-animate">
           <label class="block text-sm font-semibold text-slate-700 mb-2">Email</label>
           <input type="email" name="email" placeholder="you@example.com" required
-                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+                 class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
         </div>
       </div>
       
     <div class="grid sm:grid-cols-2 gap-4">
       <!-- Work Location -->
-      <div>
+      <div class="form-field-animate">
         <label class="block text-sm font-semibold text-slate-700 mb-2">Choose Location</label>
         <select name="location" required
-                class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+                class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
           <option value="" disabled selected>Select a location</option>
           <option>Corniche</option>
           <option>Hamdan Street</option>
@@ -575,15 +663,15 @@ class="fixed inset-0 z-[999] hidden">
       </div>
   
       <!-- Age -->
-      <div>
+      <div class="form-field-animate">
         <label class="block text-sm font-semibold text-slate-700 mb-2">Age</label>
         <input type="number" name="age" min="16" placeholder="e.g., 26"
-               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777]">
+               class="w-full px-3 py-3 rounded-md bg-white border border-slate-200 outline-none focus:border-[#FF7777] transition-colors">
       </div>
     </div>
   
     <!-- Husband VISA -->
-    <div class="mt-2">
+    <div class="mt-2 form-field-animate">
       <span class="block text-sm font-semibold text-slate-700 mb-2">
         Are you a house wife ?
       </span>
@@ -599,7 +687,7 @@ class="fixed inset-0 z-[999] hidden">
       </div>
     </div>
   <!-- Currently Working -->
-<div class="mt-2">
+<div class="mt-2 form-field-animate">
     <span class="block text-sm font-semibold text-slate-700 mb-2">
       Are you currently working?
     </span>
@@ -626,7 +714,7 @@ class="fixed inset-0 z-[999] hidden">
     <!-- Submit -->
    <!-- Submit -->
 <button type="submit"
-class="btn-pill w-full bg-[#FF7777] text-white font-semibold hover:bg-[#e96666]">
+class="btn-pill w-full bg-[#FF7777] text-white font-semibold hover:bg-[#e96666] form-field-animate transition-all duration-300 hover:scale-105">
 Send Application
 </button>
 
@@ -743,8 +831,33 @@ Send Application
   const closeBtn = document.getElementById('closeStartProject');
   const overlay  = document.getElementById('modalOverlay');
 
-  function openModal(){ modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-  function closeModal(){ modal.classList.add('hidden'); document.body.style.overflow = ''; }
+  function openModal(){ 
+    modal.classList.remove('hidden'); 
+    document.body.style.overflow = 'hidden';
+    
+    // Add animation classes after a brief delay to trigger animations
+    setTimeout(() => {
+      modal.classList.add('modal-enter');
+      modal.querySelector('#modalOverlay').classList.add('modal-overlay-enter');
+      modal.querySelector('[role="dialog"]').classList.add('modal-dialog-enter');
+    }, 10);
+  }
+  
+  function closeModal(){ 
+    // Add exit animation classes
+    modal.querySelector('[role="dialog"]').classList.add('modal-dialog-exit');
+    
+    // Wait for animation to complete, then hide modal
+    setTimeout(() => {
+      modal.classList.add('hidden'); 
+      document.body.style.overflow = '';
+      
+      // Remove animation classes
+      modal.classList.remove('modal-enter');
+      modal.querySelector('#modalOverlay').classList.remove('modal-overlay-enter');
+      modal.querySelector('[role="dialog"]').classList.remove('modal-dialog-enter', 'modal-dialog-exit');
+    }, 300);
+  }
 
   openBtn?.addEventListener('click', openModal);
   closeBtn?.addEventListener('click', closeModal);
@@ -850,7 +963,6 @@ Send Application
 </script>
 
 
-    
     
 
 </body>
